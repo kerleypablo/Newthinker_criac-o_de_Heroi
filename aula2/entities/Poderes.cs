@@ -10,7 +10,7 @@ namespace aula2.entities
     {
         [Key]
         public int id { get; set; }
-        public String poderes { get; set; }
+        public string poderes { get; set; }
 
 
     }

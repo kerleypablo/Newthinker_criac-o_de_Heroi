@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using aula2.entities;
 using Microsoft.Extensions.Logging;
 using aula2.services;
+using aula2.UseCases.Heroi;
+using aula2.DTO.Heroi.AdicionarHeroi;
 
 namespace aula2.Controllers
 {
@@ -16,12 +18,16 @@ namespace aula2.Controllers
 
         private readonly ILogger<HeroiController> _logger;
         private readonly IHeroiService _heroi;
+        private readonly IAdicionarHeroiUseCase _adicionarHeroiUseCase;
 
-        public HeroiController(ILogger<HeroiController> logger, IHeroiService heroi)
+        public HeroiController(ILogger<HeroiController> logger, IHeroiService heroi, IAdicionarHeroiUseCase adicionarHeroiUseCase)
         {
             _logger = logger;
             _heroi = heroi;
+            _adicionarHeroiUseCase = adicionarHeroiUseCase;
         }
+
+      
 
 
 
@@ -41,9 +47,9 @@ namespace aula2.Controllers
 
         // POST api/values
         [HttpPost]
-        public IActionResult HeroiAdd([FromBody] Heroi novoHeroi)
+        public IActionResult HeroiAdd([FromBody] AdicionarHeroiRequest novoHeroi)
         {
-            return Ok(_heroi.AdicionarHeroi(novoHeroi));
+            return Ok(_adicionarHeroiUseCase.Executar(novoHeroi));
         }
 
 

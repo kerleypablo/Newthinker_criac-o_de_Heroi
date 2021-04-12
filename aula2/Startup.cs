@@ -13,6 +13,10 @@ using System.Threading.Tasks;
 using aula2.context;
 using Microsoft.EntityFrameworkCore;
 using aula2.services;
+using aula2.UseCases.Heroi;
+using aula2.Repositorio;
+using aula2.Bordas.Adapter;
+using aula2.Adapter;
 
 namespace aula2
 {
@@ -35,6 +39,21 @@ namespace aula2
            
             services.AddScoped<IProdutoService, ProdutoService>();
             
+            services.AddScoped<IAdicionarFantasiaUseCase, AdicionarFantasiaUseCase>();
+            services.AddScoped<IAdicionarFraquesaUseCase, AdicionarFraquesaUseCase>();
+            services.AddScoped<IAdicionarHeroiUseCase, AdicionarHeroiUseCase>();
+            services.AddScoped<IAdicionarPoderUseCase, AdicionarPoderUseCase>();
+            services.AddScoped<IDeletarHeroiUseCase, DeletarHeroiUseCase>();
+            services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
+            services.AddScoped<IAtualizarHeroiUseCase, AtualizarHeroiUseCase>();
+            services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
+
+            services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
+
+            services.AddScoped<IAdicionarHeroi, AdicionarHeroiAdapter>();
+
+            
+
 
         }
 
