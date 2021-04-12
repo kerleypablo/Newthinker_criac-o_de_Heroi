@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace aula2.DTO.Heroi.AdicionarPoder
+namespace aula2.DTO.Poder
 {
-    public class AdicionarPoderResponse
+    public class PoderRequest
     {
+        public string nome { get; set; }
     }
 }

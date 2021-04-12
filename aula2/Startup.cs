@@ -36,17 +36,16 @@ namespace aula2
 
              services.AddEntityFrameworkNpgsql().AddDbContext<LocalDBContext>(opt => opt.UseNpgsql("Server=127.0.0.1;Database=bancoPablo;Port=5433;User Id=postgres;Password=123"));
             //services.AddEntityFrameworkNpgsql().AddDbContext<LocalDBContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("urlpablo")));
-            services.AddScoped<IAdicionarFantasiaUseCase, AdicionarFantasiaUseCase>();
-            services.AddScoped<IAdicionarFraquesaUseCase, AdicionarFraquesaUseCase>();
-            services.AddScoped<IAdicionarHeroiUseCase, AdicionarHeroiUseCase>();
-            services.AddScoped<IAdicionarPoderUseCase, AdicionarPoderUseCase>();
-            services.AddScoped<IDeletarHeroiUseCase, DeletarHeroiUseCase>();
-            services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
-            services.AddScoped<IAtualizarHeroiUseCase, AtualizarHeroiUseCase>();
-            services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
-            services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
-            services.AddScoped<IAdicionarHeroi, AdicionarHeroiAdapter>();
-
+            //services.AddScoped<IAdicionarFantasiaUseCase, AdicionarFantasiaUseCase>();
+            //services.AddScoped<IAdicionarFraquesaUseCase, AdicionarFraquesaUseCase>();
+            //services.AddScoped<IAdicionarHeroiUseCase, AdicionarHeroiUseCase>();
+            //services.AddScoped<IAdicionarPoderUseCase, AdicionarPoderUseCase>();
+            //services.AddScoped<IDeletarHeroiUseCase, DeletarHeroiUseCase>();
+            //services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
+            //services.AddScoped<IAtualizarHeroiUseCase, AtualizarHeroiUseCase>();
+            //services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
+            //services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
+            services.AddScoped<IHeroiAdapter, HeroiAdapter>();
 
         }
 

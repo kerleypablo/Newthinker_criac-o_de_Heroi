@@ -6,6 +6,6 @@ namespace aula2.entities
     {
         [Key]
         public int id { get; set; }
-        public string poder { get; set; }
+        public string nome { get; set; }
     }
 }

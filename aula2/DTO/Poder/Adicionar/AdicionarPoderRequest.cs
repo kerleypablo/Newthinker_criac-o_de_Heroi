@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace aula2.DTO.Heroi.AdicionarFatnasia
+namespace aula2.DTO.Poder.Adicionar
 {
-    public class Adicionarfantasiaresponse
+    public class AdicionarPoderRequest : PoderRequest
     {
     }
 }

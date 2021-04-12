@@ -1,13 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using aula2.entities;
 using Microsoft.Extensions.Logging;
 using aula2.services;
 using aula2.UseCases.Heroi;
-using aula2.DTO.Heroi.AdicionarHeroi;
+using aula2.DTO.Heroi.Adicionar;
 
 namespace aula2.Controllers
 {
@@ -27,50 +22,32 @@ namespace aula2.Controllers
             _adicionarHeroiUseCase = adicionarHeroiUseCase;
         }
 
-      
-
-
-
         // GET api/values
         [HttpGet]
-        public ActionResult TodosOsHerois()
+        public IActionResult Listar()
         {
             return Ok(_heroi.RetornarListadeHeroi());
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> heroi(int id)
+        public IActionResult Obter(int id)
         {
             return Ok(_heroi.RetornarHeroiporId(id));
         }
 
         // POST api/values
         [HttpPost]
-        public IActionResult HeroiAdd([FromBody] AdicionarHeroiRequest novoHeroi)
+        public IActionResult Adicionar([FromBody] AdicionarHeroiRequest novoHeroi)
         {
-            return Ok(_adicionarHeroiUseCase.Executar(novoHeroi));
+            return Ok(_adicionarHeroiUseCase.Executar(null));
         }
-
-
-        [HttpPost("{id}")]
-        public IActionResult PoderAdd([FromBody] Poder idpoder)
-        {
-            return Ok(_heroi.AdicionarPoderporId(idpoder));
-        }
-
-        [HttpPost("{id}")]
-        public IActionResult FraquesaAdd([FromBody] Fraquesa idFraquesa)
-        {
-            return Ok(_heroi.AdicionarFraquesaporId(idFraquesa));
-        }
-
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult AtualizarHeroi(int id, [FromBody] Heroi novoHeroi)
+        public IActionResult Atualizar(int id, [FromBody] AdicionarHeroiRequest novoHeroi)
         {
-            return Ok(_heroi.AtualizarHeroi(novoHeroi));
+            return Ok(_heroi.AtualizarHeroi(null));
 
         }
 

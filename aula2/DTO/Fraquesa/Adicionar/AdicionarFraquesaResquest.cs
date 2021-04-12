@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace aula2.DTO.Heroi.RetornarListadeHeroi
+namespace aula2.DTO.Fraquesa.Adicionar
 {
-    public class RetornarlistadeHeroiResponse
+    public class AdicionarFraquesaResquest : FraquesaRequest
     {
     }
 }

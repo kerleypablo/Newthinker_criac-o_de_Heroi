@@ -24,35 +24,6 @@ namespace aula2.services
             return true;
         }
 
-      Poder IHeroiService.AdicionarPoderporId(Poder id)
-        {
-            _local.poder.Add(id);
-            _local.SaveChanges();
-            return id;
-
-           
-        }
-
-
-        Fraquesa IHeroiService.AdicionarFraquesaporId(Fraquesa id)
-        {
-            _local.fraquesa.Add(id);
-            _local.SaveChanges();
-            return id;
-
-
-        }
-
-        Fantasia IHeroiService.Adicionarfantasiaporid(Fantasia id)
-        {
-            _local.fantasia.Add(id);
-            _local.SaveChanges();
-            return id;
-
-
-        }
-
-
         bool IHeroiService.AtualizarHeroi(Heroi novoHeroi)
         {
             _local.heroi.Attach(novoHeroi);
