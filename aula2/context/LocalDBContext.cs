@@ -14,14 +14,12 @@ namespace aula2.context
 
         }
 
-        public DbSet<Produto> produto { get; set; }
-        public DbSet<Categoria> categoria { get; set; }
 
         public DbSet<Heroi> heroi { get; set; }
 
         public DbSet<Fraquesa> fraquesa { get; set; }
 
-        public DbSet<Poderes> poder { get; set; }
+        public DbSet<Poder> poder { get; set; }
 
         public DbSet<Fantasia> fantasia { get; set; }
 

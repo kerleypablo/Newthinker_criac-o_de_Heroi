@@ -11,7 +11,7 @@ namespace aula2.services
 
         bool AdicionarFraquesa(Fraquesa fraquesa);
         List<Fraquesa> RetornarListadeFraquesa();
-        Poderes RetornarFraquesaporId(int id);
+        Poder RetornarFraquesaporId(int id);
         bool AtualizarFraquesa(Fraquesa fraquesa);
         bool DeletarFraquesa(int id);
 

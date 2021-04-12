@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace aula2.entities
 {
@@ -10,14 +6,12 @@ namespace aula2.entities
     {
         [Key]
         public int id { get; set; }
-        public String Nome { get; set; }
-        public String cor { get; set; }
-        public Boolean capa { get; set; }
+        public string Nome { get; set; }
+        public string cor { get; set; }
+        public bool capa { get; set; }
 
-        public Poderes poder { get; set; }
+        public Poder poder { get; set; }
 
         public Fraquesa fraquesa { get; set; }
-
-
     }
 }

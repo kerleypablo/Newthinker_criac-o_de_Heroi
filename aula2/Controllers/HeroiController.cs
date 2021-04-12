@@ -54,7 +54,7 @@ namespace aula2.Controllers
 
 
         [HttpPost("{id}")]
-        public IActionResult PoderAdd([FromBody] Poderes idpoder)
+        public IActionResult PoderAdd([FromBody] Poder idpoder)
         {
             return Ok(_heroi.AdicionarPoderporId(idpoder));
         }

@@ -10,7 +10,7 @@ namespace aula2.services
     {
         bool AdicionarFantasia(Fantasia fantasia);
         List<Fantasia> RetornarListadeFantasia();
-        Poderes AdicionarPoderporId(Poderes id);
+        Poder AdicionarPoderporId(Poder id);
 
        Fraquesa AdicionarFraquesaporId(Fraquesa id);
 

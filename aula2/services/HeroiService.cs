@@ -24,7 +24,7 @@ namespace aula2.services
             return true;
         }
 
-      Poderes IHeroiService.AdicionarPoderporId(Poderes id)
+      Poder IHeroiService.AdicionarPoderporId(Poder id)
         {
             _local.poder.Add(id);
             _local.SaveChanges();
@@ -63,8 +63,8 @@ namespace aula2.services
 
         bool IHeroiService.DeletarHeroi(int id)
         {
-            var objetoApagar = _local.produto.Where(d => d.id == id).FirstOrDefault();
-            _local.produto.Remove(objetoApagar);
+            var objetoApagar = _local.heroi.Where(d => d.id == id).FirstOrDefault();
+            _local.heroi.Remove(objetoApagar);
             _local.SaveChanges();
             return true;
         }

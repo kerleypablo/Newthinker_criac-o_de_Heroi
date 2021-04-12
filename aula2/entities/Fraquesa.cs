@@ -11,7 +11,7 @@ namespace aula2.entities
         [Key]
         public int id { get; set; }
 
-        public String fraquesa { get; set; }
+        public string fraquesa { get; set; }
 
     }
 }

@@ -11,7 +11,7 @@ namespace aula2.DTO.Heroi.AdicionarHeroi
 
         public String nome { get; set; }
 
-        public Poderes poder { get; set; }
+        public Poder poder { get; set; }
 
         public Fraquesa fraquesa { get; set; }
 

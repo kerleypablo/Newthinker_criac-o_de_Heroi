@@ -36,8 +36,8 @@ namespace aula2.services
 
         bool IFraquesaService.DeletarFraquesa(int id)
         {
-            var objetoApagar = _local.produto.Where(d => d.id == id).FirstOrDefault();
-            _local.produto.Remove(objetoApagar);
+            var objetoApagar = _local.heroi.Where(d => d.id == id).FirstOrDefault();
+            _local.heroi.Remove(objetoApagar);
             _local.SaveChanges();
             return true;
         }
@@ -47,7 +47,7 @@ namespace aula2.services
             return _local.fraquesa.ToList();
         }
 
-        Poderes IFraquesaService.RetornarFraquesaporId(int id)
+        Poder IFraquesaService.RetornarFraquesaporId(int id)
         {
             return _local.poder.Where(d => d.id == id).FirstOrDefault();
         }

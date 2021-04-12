@@ -41,14 +41,14 @@ namespace aula2.Controllers
 
         // POST api/values
         [HttpPost]
-        public IActionResult PoderAdd([FromBody] Poderes novoPoder)
+        public IActionResult PoderAdd([FromBody] Poder novoPoder)
         {
             return Ok(_poder.AdicionarPoder(novoPoder));
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult AtualizarPoder(int id, [FromBody] Poderes novoPoder)
+        public IActionResult AtualizarPoder(int id, [FromBody] Poder novoPoder)
         {
             return Ok(_poder.AtualizarPoder(novoPoder));
 

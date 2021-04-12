@@ -9,10 +9,10 @@ namespace aula2.services
     public interface IPoderService
     {
 
-        bool AdicionarPoder(Poderes poderes);
-        List<Poderes> RetornarListadePoderes();
-        Poderes RetornarPoderporId(int id);
-        bool AtualizarPoder(Poderes poderes);
+        bool AdicionarPoder(Poder poderes);
+        List<Poder> RetornarListadePoderes();
+        Poder RetornarPoderporId(int id);
+        bool AtualizarPoder(Poder poderes);
         bool DeletarPoder(int id);
 
 
