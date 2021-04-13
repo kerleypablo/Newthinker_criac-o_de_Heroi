@@ -1,5 +1,4 @@
 ﻿using aula2.Bordas.Adapter;
-using aula2.DTO.Heroi.Adicionar;
 using aula2.Repositorio;
 using aula2.UseCases.Heroi;
 using Moq;
@@ -15,13 +14,13 @@ namespace Aula2.Teste.UseCase.Heroi
     {
         private readonly Mock<IRepositorioHeroi> _repositorioHeroi;
         private readonly Mock<IHeroiAdapter> _heroiAdapter;
-        private readonly AdicionarHeroiUseCase _UseCase;
+        private readonly AtualizarHeroiUseCase _UseCase;
 
         public AtualizarHeroiUsecaseTeste()
         {
             _repositorioHeroi = new Mock<IRepositorioHeroi>();
             _heroiAdapter = new Mock<IHeroiAdapter>();
-            _UseCase = new AdicionarHeroiUseCase(_repositorioHeroi.Object, _heroiAdapter.Object);
+            _UseCase = new AtualizarHeroiUseCase(_repositorioHeroi.Object, _heroiAdapter.Object);
         }
 
         [Fact]
@@ -37,7 +36,7 @@ namespace Aula2.Teste.UseCase.Heroi
             _heroiAdapter.Setup(adapter=>adapter.ConvertRequestParaHeroi(request)).Returns(heroi);
 
             //act
-            var result = _UseCase.Executar(request);
+            var result = _UseCase.Executar(heroi.id,request);
 
             //assert 
             response.Should().BeEquivalentTo(result);

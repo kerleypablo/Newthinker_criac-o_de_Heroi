@@ -1,4 +1,5 @@
 ﻿using aula2.DTO.Heroi.Adicionar;
+using aula2.DTO.Heroi.Atualizar;
 using Bogus;
 using System;
 using System.Collections.Generic;
@@ -9,20 +10,20 @@ namespace Aula2.Teste.UseCase.Builder
     class AtualizarHeroiRequestBuilder
     {
         private readonly Faker _faker = new Faker("pt_BR");
-        private readonly AdicionarHeroiRequest _AdicionarHeroi;
+        private readonly AtualizarHeroiRequest _AtualizarHeroi;
         public AtualizarHeroiRequestBuilder()
         {
-            _AdicionarHeroi = new AdicionarHeroiRequest();
-            _AdicionarHeroi.nome = _faker.Random.String(15);
-            _AdicionarHeroi.poderid = _faker.Random.Int(0);
-            _AdicionarHeroi.fraquesaid = _faker.Random.Int(0);
-            _AdicionarHeroi.fantasiaid = _faker.Random.Int(0);
+            _AtualizarHeroi = new AtualizarHeroiRequest();
+            _AtualizarHeroi.nome = _faker.Random.String(15);
+            _AtualizarHeroi.poderid = _faker.Random.Int(0);
+            _AtualizarHeroi.fraquesaid = _faker.Random.Int(0);
+            _AtualizarHeroi.fantasiaid = _faker.Random.Int(0);
 
         }
 
-        public AdicionarHeroiRequest Build()
+        public AtualizarHeroiRequest Build()
         {
-            return _AdicionarHeroi;
+            return _AtualizarHeroi;
         }
     }
 }
