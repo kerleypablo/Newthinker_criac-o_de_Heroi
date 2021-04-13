@@ -5,6 +5,6 @@ namespace aula2.UseCases.Heroi
 {
     public interface IAtualizarHeroiUseCase
     {
-        AtualizarHeroiResponse Executar(AtualizarHeroiRequest request);
+        AtualizarHeroiResponse Executar(int id, AtualizarHeroiRequest request);
     }
 }

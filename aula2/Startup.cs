@@ -1,18 +1,10 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using aula2.context;
 using Microsoft.EntityFrameworkCore;
-using aula2.services;
 using aula2.UseCases.Heroi;
 using aula2.Repositorio;
 using aula2.Bordas.Adapter;
@@ -38,12 +30,12 @@ namespace aula2
             //services.AddEntityFrameworkNpgsql().AddDbContext<LocalDBContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("urlpablo")));
 
             services.AddScoped<IAdicionarHeroiUseCase, AdicionarHeroiUseCase>();
-            services.AddScoped<IDeletarHeroiUseCase, DeletarHeroiUseCase>();
+            services.AddScoped<IRemoverHeroiUseCase, RemoverHeroiUseCase>();
             services.AddScoped<IAtualizarHeroiUseCase, AtualizarHeroiUseCase>();
             services.AddScoped<IListarHeroiUseCase, ListarHeroiUseCase>();
             services.AddScoped<IObterHeroiUseCase, ObterHeroiUseCase>();
             services.AddScoped<IHeroiAdapter, HeroiAdapter>();
-
+            services.AddScoped<IRepositorioHeroi, RepositorioHeroi>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

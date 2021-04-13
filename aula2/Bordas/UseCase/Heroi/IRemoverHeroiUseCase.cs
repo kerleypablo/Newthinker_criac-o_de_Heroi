@@ -2,7 +2,7 @@
 
 namespace aula2.UseCases.Heroi
 {
-    public interface IDeletarHeroiUseCase
+    public interface IRemoverHeroiUseCase
     {
         DeletarHeroiResponse Executar(int id);
     }

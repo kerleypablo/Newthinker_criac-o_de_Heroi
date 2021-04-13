@@ -5,11 +5,11 @@ using System;
 
 namespace aula2.UseCases.Heroi
 {
-    public class DeletarHeroiUseCase : IDeletarHeroiUseCase
+    public class RemoverHeroiUseCase : IRemoverHeroiUseCase
     {
         private IRepositorioHeroi _repositorioHeroi;
 
-        public DeletarHeroiUseCase(IRepositorioHeroi repositorioHeroi, IHeroiAdapter adapter)
+        public RemoverHeroiUseCase(IRepositorioHeroi repositorioHeroi, IHeroiAdapter adapter)
         {
             _repositorioHeroi = repositorioHeroi;
         }

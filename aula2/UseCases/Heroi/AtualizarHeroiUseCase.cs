@@ -17,7 +17,7 @@ namespace aula2.UseCases.Heroi
             _adapter = adapter;
         }
 
-        public AtualizarHeroiResponse Executar(AtualizarHeroiRequest request)
+        public AtualizarHeroiResponse Executar(int id, AtualizarHeroiRequest request)
         {
             var response = new AtualizarHeroiResponse();
             try
