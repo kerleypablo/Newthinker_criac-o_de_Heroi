@@ -16,5 +16,7 @@ namespace aula2.Bordas.Adapter
         Fraqueza ConvertAtualizarFraquezaRequestParaFraqueza(AtualizarFraquezaRequest request);
 
         FraquezaResponse ConvertFraquezaParaFraquezaResponse(Fraqueza fraqueza);
+
+        Fraqueza ConvertRequestParaFraqueza(FraquezaRequest request);
     }
 }

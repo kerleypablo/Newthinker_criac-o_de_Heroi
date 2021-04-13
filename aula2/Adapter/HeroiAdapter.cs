@@ -28,7 +28,9 @@ namespace aula2.Adapter
             return ConvertRequestParaHeroi(request);
         }
 
-        private Heroi ConvertRequestParaHeroi(HeroiRequest request)
+
+
+        public Heroi ConvertRequestParaHeroi(HeroiRequest request)
         {
             var heroi = new Heroi();
             heroi.nome = request.nome;
@@ -36,5 +38,7 @@ namespace aula2.Adapter
             heroi.fraquesaid = request.fraquesaid;
             return heroi;
         }
+
+     
     }
 }

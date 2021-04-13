@@ -29,7 +29,7 @@ namespace aula2.Adapter
             return response;
         }
 
-        private Fraqueza ConvertRequestParaFraqueza(FraquezaRequest request)
+        public Fraqueza ConvertRequestParaFraqueza(FraquezaRequest request)
         {
             var fraqueza = new Fraqueza();
             fraqueza.nome = request.nome;

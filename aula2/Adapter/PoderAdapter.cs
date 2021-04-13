@@ -28,7 +28,7 @@ namespace aula2.Adapter
             response.nome = poder.nome;
             return response;
         }
-        private Poder ConvertRequestParaPoder(PoderRequest request)
+        public Poder ConvertRequestParaPoder(PoderRequest request)
         {
             var poder = new Poder();
             poder.nome = request.nome;

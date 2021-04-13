@@ -16,5 +16,7 @@ namespace aula2.Bordas.Adapter
         Heroi ConvertAtualizarHeroiRequestParaHeroi(AtualizarHeroiRequest request);
 
         HeroiResponse ConvertHeroiParaHeroiResponse(Heroi heroi);
+
+        Heroi ConvertRequestParaHeroi(HeroiRequest request);
     }
 }

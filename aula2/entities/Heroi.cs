@@ -20,6 +20,6 @@ namespace aula2.entities
 
         public Fantasia fantasia { get; set; }
 
-
+      
     }
 }

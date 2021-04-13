@@ -15,5 +15,7 @@ namespace aula2.Bordas.Adapter
 
         PoderResponse ConvertPoderParaPoderResponse(Poder poder);
 
+        Poder ConvertRequestParaPoder(PoderRequest request);
+
     }
 }
