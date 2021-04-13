@@ -1,6 +1,7 @@
 ﻿using aula2.Bordas.Adapter;
 using aula2.DTO.Heroi;
 using aula2.DTO.Heroi.Adicionar;
+using aula2.DTO.Heroi.Atualizar;
 using aula2.entities;
 using System;
 
@@ -8,18 +9,32 @@ namespace aula2.Adapter
 {
     public class HeroiAdapter : IHeroiAdapter
     {
-        public HeroiResponse ConvertHeroiParaHeroiResponse(Heroi heroi)
+        public HeroiResponse ConvertHeroiParaHeroiResponse(Heroi herois)
         {
-            throw new NotImplementedException();
+            var response = new HeroiResponse();
+            response.nome = herois.nome;
+            response.poderid = herois.poderid;
+            response.fraquesaid = herois.fraquesaid;
+            return response;
         }
 
-        public Heroi ConvertHeroiRequestParaHeroi(AdicionarHeroiRequest request)
+        public Heroi ConvertAdicionarHeroiRequestParaHeroi(AdicionarHeroiRequest request)
         {
-            var novoHeroi = new Heroi();
-            novoHeroi.nome = request.nome;
-            novoHeroi.poderid = request.poderid;
-            novoHeroi.fraquesaid = request.fraquesaid;
-            return novoHeroi;
+            return ConvertRequestParaHeroi(request);
+        }
+
+        public Heroi ConvertAtualizarHeroiRequestParaHeroi(AtualizarHeroiRequest request)
+        {
+            return ConvertRequestParaHeroi(request);
+        }
+
+        private Heroi ConvertRequestParaHeroi(HeroiRequest request)
+        {
+            var heroi = new Heroi();
+            heroi.nome = request.nome;
+            heroi.poderid = request.poderid;
+            heroi.fraquesaid = request.fraquesaid;
+            return heroi;
         }
     }
 }

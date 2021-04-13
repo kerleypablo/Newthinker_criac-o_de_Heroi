@@ -3,7 +3,7 @@ using aula2.DTO.Heroi;
 
 namespace aula2.UseCases.Heroi
 {
-    public interface IRetornrHeroiPorIdUseCase
+    public interface IObterHeroiUseCase
     {
         HeroiResponse Executar(int id);
 

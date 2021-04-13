@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace aula2.UseCases.Heroi
 {
-    public interface IRetornarListadeheroiUseCase
+    public interface IListarHeroiUseCase
     {
         IEnumerable<HeroiResponse> Executar();
 

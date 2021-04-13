@@ -1,5 +1,6 @@
 ﻿using aula2.DTO.Heroi;
 using aula2.DTO.Heroi.Adicionar;
+using aula2.DTO.Heroi.Atualizar;
 using aula2.entities;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,9 @@ namespace aula2.Bordas.Adapter
 {
     public interface IHeroiAdapter
     {
-        Heroi ConvertHeroiRequestParaHeroi(AdicionarHeroiRequest request);
+        Heroi ConvertAdicionarHeroiRequestParaHeroi(AdicionarHeroiRequest request);
+
+        Heroi ConvertAtualizarHeroiRequestParaHeroi(AtualizarHeroiRequest request);
 
         HeroiResponse ConvertHeroiParaHeroiResponse(Heroi heroi);
     }

@@ -34,17 +34,14 @@ namespace aula2
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-             services.AddEntityFrameworkNpgsql().AddDbContext<LocalDBContext>(opt => opt.UseNpgsql("Server=127.0.0.1;Database=bancoPablo;Port=5433;User Id=postgres;Password=123"));
+            services.AddEntityFrameworkNpgsql().AddDbContext<LocalDBContext>(opt => opt.UseNpgsql("Server=127.0.0.1;Database=bancoPablo;Port=5433;User Id=postgres;Password=123"));
             //services.AddEntityFrameworkNpgsql().AddDbContext<LocalDBContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("urlpablo")));
-            //services.AddScoped<IAdicionarFantasiaUseCase, AdicionarFantasiaUseCase>();
-            //services.AddScoped<IAdicionarFraquesaUseCase, AdicionarFraquesaUseCase>();
-            //services.AddScoped<IAdicionarHeroiUseCase, AdicionarHeroiUseCase>();
-            //services.AddScoped<IAdicionarPoderUseCase, AdicionarPoderUseCase>();
-            //services.AddScoped<IDeletarHeroiUseCase, DeletarHeroiUseCase>();
-            //services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
-            //services.AddScoped<IAtualizarHeroiUseCase, AtualizarHeroiUseCase>();
-            //services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
-            //services.AddScoped<IRetornrHeroiPorIdUseCase, RetornrHeroiPorIdUseCase>();
+
+            services.AddScoped<IAdicionarHeroiUseCase, AdicionarHeroiUseCase>();
+            services.AddScoped<IDeletarHeroiUseCase, DeletarHeroiUseCase>();
+            services.AddScoped<IAtualizarHeroiUseCase, AtualizarHeroiUseCase>();
+            services.AddScoped<IListarHeroiUseCase, ListarHeroiUseCase>();
+            services.AddScoped<IObterHeroiUseCase, ObterHeroiUseCase>();
             services.AddScoped<IHeroiAdapter, HeroiAdapter>();
 
         }
