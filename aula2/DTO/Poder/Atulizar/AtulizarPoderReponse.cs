@@ -7,5 +7,6 @@ namespace aula2.DTO.Poder.Atulizar
 {
     public class AtulizarPoderReponse : PoderResponse
     {
+        public string msg { get; set; }
     }
 }

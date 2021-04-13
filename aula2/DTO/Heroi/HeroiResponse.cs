@@ -17,7 +17,7 @@ namespace aula2.DTO.Heroi
 
         public int fraquesaid { get; set; }
 
-        public FraquesaResponse fraquesa { get; set; }
+        public FraquezaResponse fraquesa { get; set; }
         public PoderResponse poder { get; set; }
     }
 }

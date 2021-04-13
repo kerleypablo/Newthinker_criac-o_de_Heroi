@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace aula2.DTO.Fraquesa.Atulizar
 {
-    public class AtulizarFraquesaReponse : FraquesaResponse
+    public class AtualizarFraquezaRequest : FraquezaRequest
     {
     }
 }

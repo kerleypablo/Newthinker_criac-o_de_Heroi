@@ -16,7 +16,7 @@ namespace aula2.entities
         public int fantasiaid { get; set; }
         public Poder poder { get; set; }
 
-        public Fraquesa fraquesa { get; set; }
+        public Fraqueza fraquesa { get; set; }
 
         public Fantasia fantasia { get; set; }
 

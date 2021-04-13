@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace aula2.entities
 {
-    public class Fraquesa
+    public class Fraqueza
     {
         [Key]
         public int id { get; set; }
 
-        public string fraquesa { get; set; }
+        public string nome { get; set; }
 
     }
 }

@@ -12,6 +12,6 @@ namespace aula2.entities
 
         public Poder poder { get; set; }
 
-        public Fraquesa fraquesa { get; set; }
+        public Fraqueza fraquesa { get; set; }
     }
 }

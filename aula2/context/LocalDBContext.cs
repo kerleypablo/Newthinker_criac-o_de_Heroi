@@ -17,7 +17,7 @@ namespace aula2.context
 
         public DbSet<Heroi> heroi { get; set; }
 
-        public DbSet<Fraquesa> fraquesa { get; set; }
+        public DbSet<Fraqueza> fraqueza { get; set; }
 
         public DbSet<Poder> poder { get; set; }
 

@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace aula2.DTO.Fraquesa.Adicionar
 {
-    public class AdicionarFraquesaResquest : FraquesaRequest
+    public class AdicionarFraquezaResponse : FraquezaResponse
     {
+        public string msg { get; set; }
+
+        public int id { get; set; }
     }
 }

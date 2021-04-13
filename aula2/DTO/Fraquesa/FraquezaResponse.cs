@@ -1,8 +1,9 @@
 ﻿
 namespace aula2.DTO.Fraquesa
 {
-    public class FraquesaRequest
+    public class FraquezaResponse
     {
+        public int id { get; set; }
         public string nome { get; set; }
     }
 }
